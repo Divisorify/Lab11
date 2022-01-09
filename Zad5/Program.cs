@@ -24,8 +24,8 @@ static void oblicz(int a, int b, int c)
     }
     else if (delta == 0)
     {
-        pierw0 = (-b) / (2 * a);
-        Console.WriteLine("Pierwiastek wynosi: " + pierw0);
+        //pierw0 = (-b) / (2 * a);
+        Console.WriteLine("Pierwiastek wynosi: {0}", -b / (2 * a));
     }
     else if (delta > 0)
     {

@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-private static void manageCode()
+static void manageCode()
 {
     int[] tab1 = new int[1500];
     int[] tab2 = new int[1500];
@@ -14,7 +14,7 @@ private static void manageCode()
             tab3[k] += tab1[k]+tab2[z];
 }
 
-private static unsafe void unmanageCode()
+static unsafe void unmanageCode()
 {
     int* tab1 = stackalloc int[1500];
     int* tab2 = stackalloc int[1500];
@@ -29,8 +29,8 @@ private static unsafe void unmanageCode()
             *k += *(tab1+z)+*(tab2+z);
 }
 
-unsafe static void Main(string[] args)
-{
+
+
     int iter = 1000;
     System.Diagnostics.Stopwatch clock = new System.Diagnostics.Stopwatch();
 
@@ -51,4 +51,3 @@ unsafe static void Main(string[] args)
     clock.Stop();
     Console.WriteLine("Dla kodu niezarządzanego: "+clock.ElapsedMilliseconds.ToString());
 
-}
